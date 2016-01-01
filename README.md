@@ -1,1 +1,5 @@
 # dotfiles
+
+## Usage
+
+rake install
