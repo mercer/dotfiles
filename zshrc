@@ -29,6 +29,7 @@ alias htop='sudo htop'
 alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
 alias stop-tomcat='/usr/local/opt/tomcat/bin/catalina stop'
 alias read-logs-tomcat='less +FG /usr/local/opt/tomcat/libexec/logs/catalina.out'
+alias ..='cd ..'
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
