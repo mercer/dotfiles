@@ -1,9 +1,13 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
-ZSH_THEME="robbyrussell"
+ZSH_THEME="Honukai"
 plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
+
+# GNU command line tools
+export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
 
 # rbenv
 eval "$(rbenv init -)"
@@ -15,21 +19,36 @@ alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
 # jenv
 eval "$(jenv init -)"
 
+# sdkman -- for scala, groovy, gradle
+export SDKMAN_DIR="/Users/$USER/.sdkman"
+source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
+
+# perlbrew
+source ~/perl5/perlbrew/etc/bashrc
+
 # nvm
 export NVM_DIR='~/.nvm'
 . $(brew --prefix nvm)/nvm.sh
 
-# autojump
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# jump
+eval "$(jump shell zsh)"
+
+# Eternal bash history.
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+export HISTTIMEFORMAT="[%F %T] "
+# Force prompt to write history after every command.
+# http://superuser.com/questions/20900/bash-history-loss
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # aliases
-alias idea='open -a 'IntelliJ IDEA 15' .'
+alias idea="open -a 'IntelliJ IDEA 15' ."
 alias reload='. ~/.zshrc'
 alias htop='sudo htop'
 alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
 alias stop-tomcat='/usr/local/opt/tomcat/bin/catalina stop'
 alias read-logs-tomcat='less +FG /usr/local/opt/tomcat/libexec/logs/catalina.out'
-alias ..='cd ..'
+alias play='open -a "MplayerX"'
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
