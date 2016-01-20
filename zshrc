@@ -33,13 +33,19 @@ export NVM_DIR='~/.nvm'
 # jump
 eval "$(jump shell zsh)"
 
-# Eternal bash history.
+# Eternal bash history
 export HISTFILESIZE=-1
 export HISTSIZE=-1
 export HISTTIMEFORMAT="[%F %T] "
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# Enable syntax-highlighting in less: brew install source-highlight
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
 
 # aliases
 alias idea="open -a 'IntelliJ IDEA 15' ."
