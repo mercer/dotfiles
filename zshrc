@@ -27,22 +27,21 @@ source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
 source ~/perl5/perlbrew/etc/bashrc
 
 # nvm
-export NVM_DIR='~/.nvm'
-. $(brew --prefix nvm)/nvm.sh
+export NVM_DIR="/Users/$USER/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # docker
 export DOCKER_TLS_VERIFY="1"
 export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/$USER/.docker/machine/machines/docker-default"
-export DOCKER_MACHINE_NAME="docker-default"
-eval $(docker-machine env docker-default)
+export DOCKER_CERT_PATH="/Users/$USER/.docker/machine/machines/default"
+export DOCKER_MACHINE_NAME="default"
+eval $(docker-machine env default)
 
 # jump
 eval "$(jump shell zsh)"
 
 # Eternal bash history
 export HISTFILESIZE=-1
-# export HISTSIZE=-1
 export HISTTIMEFORMAT="[%F %T] "
 
 # Enable syntax-highlighting in less: brew install source-highlight
