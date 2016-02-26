@@ -30,13 +30,6 @@ source ~/perl5/perlbrew/etc/bashrc
 export NVM_DIR="/Users/$USER/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-# docker
-export DOCKER_TLS_VERIFY="1"
-export DOCKER_HOST="tcp://192.168.99.100:2376"
-export DOCKER_CERT_PATH="/Users/$USER/.docker/machine/machines/default"
-export DOCKER_MACHINE_NAME="default"
-eval $(docker-machine env default)
-
 # jump
 eval "$(jump shell zsh)"
 
