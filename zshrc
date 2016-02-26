@@ -1,7 +1,7 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting docker)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
@@ -51,7 +51,7 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 # aliases
-alias idea="open -a 'IntelliJ IDEA 15' ."
+alias idea="open -a 'IntelliJ IDEA 16 EAP' ."
 alias reload='. ~/.zshrc'
 alias htop='sudo htop'
 alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
