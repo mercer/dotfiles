@@ -44,7 +44,7 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 # aliases
-alias idea="open -a 'IntelliJ IDEA 16 EAP' ."
+alias idea="open -a 'IntelliJ IDEA' ."
 alias reload='. ~/.zshrc'
 alias htop='sudo htop'
 alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
