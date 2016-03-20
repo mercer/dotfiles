@@ -54,3 +54,6 @@ alias play='open -a "MplayerX"'
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
+
+# handy tools
+source /Users/$USER/dotfiles/lib/transfer.sh
