@@ -1,7 +1,7 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting docker)
+plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting gradle docker)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
@@ -51,9 +51,14 @@ alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
 alias stop-tomcat='/usr/local/opt/tomcat/bin/catalina stop'
 alias read-logs-tomcat='less +FG /usr/local/opt/tomcat/libexec/logs/catalina.out'
 alias play='open -a "MplayerX"'
+alias ls='ls --color=auto -l'
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
 
 # handy tools
-source /Users/$USER/dotfiles/lib/transfer.sh
+# source /Users/$USER/dotfiles/lib/transfer.sh
+
+# colors
+d=.dircolors.256dark
+test -r $d && eval "$(dircolors $d)"
