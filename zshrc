@@ -1,7 +1,7 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(git colored-man colorize github jira vagrant virtualenv pip python brew osx zsh-syntax-highlighting gradle docker)
+plugins=(colored-man colorize vagrant virtualenv pip python brew osx zsh-syntax-highlighting gradle docker)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
@@ -52,6 +52,7 @@ alias stop-tomcat='/usr/local/opt/tomcat/bin/catalina stop'
 alias read-logs-tomcat='less +FG /usr/local/opt/tomcat/libexec/logs/catalina.out'
 alias play='open -a "MplayerX"'
 alias ls='ls --color=auto -l'
+alias g='./gradlew'
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
