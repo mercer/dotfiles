@@ -56,6 +56,8 @@ alias ls='ls --color=auto -AltF'
 alias g='./gradlew'
 alias aliasname='less -FX'
 alias date='date -u +"%Y-%m-%dT%H:%M:%SZ"'
+alias egrep='egrep -i --color'
+alias grep=egrep
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
