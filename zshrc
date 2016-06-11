@@ -58,6 +58,7 @@ alias aliasname='less -FX'
 alias date='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias egrep='egrep -i --color'
 alias grep=egrep
+eval "$(thefuck --alias fix)"
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
