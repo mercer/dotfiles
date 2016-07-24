@@ -33,6 +33,9 @@ export NVM_DIR="/Users/$USER/.nvm"
 # jump
 eval "$(jump shell zsh)"
 
+# Swiss Army Knife for Mac OS X
+export PATH=${PATH}:/usr/local/m-cli
+
 # Eternal bash history
 export HISTFILESIZE=-1
 export HISTTIMEFORMAT="[%F %T] "
@@ -44,7 +47,7 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 # aliases
-alias idea="open -a 'IntelliJ IDEA' ."
+alias idea="open -a 'IntelliJ IDEA 2016.2.1 EAP.app' ."
 alias excel="open -a 'Microsoft Excel'"
 alias reload='. ~/.zshrc'
 alias htop='sudo htop'
@@ -52,7 +55,7 @@ alias start-tomcat='/usr/local/opt/tomcat/bin/catalina start'
 alias stop-tomcat='/usr/local/opt/tomcat/bin/catalina stop'
 alias read-logs-tomcat='less +FG /usr/local/opt/tomcat/libexec/logs/catalina.out'
 alias play='open -a "MplayerX"'
-alias ls='ls --color=auto -AltF'
+alias ls='ls --color=auto'
 alias g='./gradlew'
 alias aliasname='less -FX'
 alias date='date -u +"%Y-%m-%dT%H:%M:%SZ"'

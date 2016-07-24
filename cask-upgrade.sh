@@ -4,6 +4,7 @@ IFS=$'\n\t'
 
 for app in "$@"
 do
-    rm -rf /opt/homebrew-cask/Caskroom/$app
+    brew cask uninstall --force $app
+    rm -rf /usr/local/Caskroom/$app
     brew cask install $app
 done
