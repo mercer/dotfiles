@@ -47,7 +47,7 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 # aliases
-alias idea="open -a 'IntelliJ IDEA 2016.2.1 EAP.app' ."
+alias idea="open -a 'IntelliJ IDEA.app'"
 alias excel="open -a 'Microsoft Excel'"
 alias reload='. ~/.zshrc'
 alias htop='sudo htop'
@@ -72,3 +72,15 @@ source /Users/$USER/secrets/secrets.sh
 # colors
 d=.dircolors.256dark
 test -r $d && eval "$(dircolors $d)"
+
+# colors in man pages
+man() {
+    LESS_TERMCAP_mb=$'\e'"[1;31m" \
+    LESS_TERMCAP_md=$'\e'"[1;31m" \
+    LESS_TERMCAP_me=$'\e'"[0m" \
+    LESS_TERMCAP_se=$'\e'"[0m" \
+    LESS_TERMCAP_so=$'\e'"[1;44;33m" \
+    LESS_TERMCAP_ue=$'\e'"[0m" \
+    LESS_TERMCAP_us=$'\e'"[1;32m" \
+    command man "$@"
+}
