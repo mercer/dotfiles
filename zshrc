@@ -1,27 +1,27 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(brew)
+plugins=(brew nvm-zsh)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
 # GNU command line tools
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+# export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+# alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
 
 # rbenv
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # pyenv
-eval "$(pyenv init -)"
-alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
+# eval "$(pyenv init -)"
+# alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
 
 # jenv
 eval "$(jenv init -)"
 
 # sdkman -- for scala, groovy, gradle
-export SDKMAN_DIR="/Users/$USER/.sdkman"
-source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
+# export SDKMAN_DIR="/Users/$USER/.sdkman"
+# source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
 
 # perlbrew
 # source ~/perl5/perlbrew/etc/bashrc
@@ -57,7 +57,7 @@ alias aliasname='less -FX'
 alias date='date -u +"%Y-%m-%dT%H:%M:%SZ"'
 alias egrep='egrep -i --color'
 alias grep=egrep
-eval "$(thefuck --alias fix)"
+# eval "$(thefuck --alias fix)"
 
 # secrets
 source /Users/$USER/secrets/secrets.sh
