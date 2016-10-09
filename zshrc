@@ -1,13 +1,15 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(brew nvm-zsh)
+# plugins=(brew nvm-zsh)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
-# GNU command line tools
+# GNU command line tools and colors
 # export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 # alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+# d=.dircolors.256dark
+# test -r $d && eval "$(dircolors $d)"
 
 # rbenv
 # eval "$(rbenv init -)"
@@ -17,7 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # alias brew="env PATH=${PATH/\/Users\/$USER\/\.pyenv\/shims:/} brew"
 
 # jenv
-eval "$(jenv init -)"
+# eval "$(jenv init -)"
 
 # sdkman -- for scala, groovy, gradle
 # export SDKMAN_DIR="/Users/$USER/.sdkman"
@@ -64,10 +66,6 @@ source /Users/$USER/secrets/secrets.sh
 
 # handy tools
 # source /Users/$USER/dotfiles/lib/transfer.sh
-
-# colors
-d=.dircolors.256dark
-test -r $d && eval "$(dircolors $d)"
 
 # colors in man pages
 # man() {
