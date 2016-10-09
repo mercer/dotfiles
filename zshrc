@@ -1,7 +1,7 @@
 # zsh
 export ZSH=/Users/$USER/.oh-my-zsh
 ZSH_THEME="Honukai"
-plugins=(colored-man colorize vagrant virtualenv pip python brew osx zsh-syntax-highlighting gradle docker)
+plugins=(brew)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
 
@@ -24,11 +24,7 @@ export SDKMAN_DIR="/Users/$USER/.sdkman"
 source "/Users/$USER/.sdkman/bin/sdkman-init.sh"
 
 # perlbrew
-source ~/perl5/perlbrew/etc/bashrc
-
-# nvm
-export NVM_DIR="/Users/$USER/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# source ~/perl5/perlbrew/etc/bashrc
 
 # jump
 eval "$(jump shell zsh)"
@@ -74,13 +70,13 @@ d=.dircolors.256dark
 test -r $d && eval "$(dircolors $d)"
 
 # colors in man pages
-man() {
-    LESS_TERMCAP_mb=$'\e'"[1;31m" \
-    LESS_TERMCAP_md=$'\e'"[1;31m" \
-    LESS_TERMCAP_me=$'\e'"[0m" \
-    LESS_TERMCAP_se=$'\e'"[0m" \
-    LESS_TERMCAP_so=$'\e'"[1;44;33m" \
-    LESS_TERMCAP_ue=$'\e'"[0m" \
-    LESS_TERMCAP_us=$'\e'"[1;32m" \
-    command man "$@"
-}
+# man() {
+#     LESS_TERMCAP_mb=$'\e'"[1;31m" \
+#     LESS_TERMCAP_md=$'\e'"[1;31m" \
+#     LESS_TERMCAP_me=$'\e'"[0m" \
+#     LESS_TERMCAP_se=$'\e'"[0m" \
+#     LESS_TERMCAP_so=$'\e'"[1;44;33m" \
+#     LESS_TERMCAP_ue=$'\e'"[0m" \
+#     LESS_TERMCAP_us=$'\e'"[1;32m" \
+#     command man "$@"
+# }
